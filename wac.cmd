@@ -3,7 +3,6 @@ setlocal
 
 set /p login="Enter username: "
 set /p pass="Enter password: "
-
 net user %login% %pass% /add > nul || goto :not_an_admin
 
 set /p admin="Is admin (Y/N)? "
