@@ -1,2 +1,2 @@
 # windows-account-creator
-Batch script for creating user accounts
+Batch script to create user accounts
