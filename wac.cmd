@@ -7,6 +7,7 @@ net user %login% %pass% /add > nul || goto :not_an_admin
 echo.
 
 set /p admin="Is admin (Y/N)? "
+if "%admin%"=="Y" net localgroup Administrators %login% /add > nul || goto :group_not_found
 if "%admin%"=="y" net localgroup Administrators %login% /add > nul || goto :group_not_found
 echo.
 
