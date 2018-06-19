@@ -12,11 +12,12 @@ if "%admin%"=="y" net localgroup Administrators %login% /add > nul || goto :grou
 echo.
 
 echo Success!
-exit /b 0
+exit
 
 :not_an_admin
-exit /b 1
+echo Administrator rights required!
+exit
 
 :group_not_found
-net user %login% /delete > nul
-exit /b 2
+echo Administrators group not found!
+exit
